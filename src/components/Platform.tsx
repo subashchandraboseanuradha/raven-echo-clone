@@ -18,7 +18,7 @@ const platformFeatures = [
   },
   {
     icon: Database,
-    title: "Multi-Database Support",
+    title: "Multi-Database",
     description: "Works with PostgreSQL, MySQL, Snowflake, and more.",
   },
   {
@@ -28,18 +28,18 @@ const platformFeatures = [
   },
   {
     icon: Users,
-    title: "White-Glove Onboarding",
+    title: "White-Glove Setup",
     description: "We guide you through setup and answer all your questions.",
   },
 ];
 
 const Platform = () => {
   return (
-    <section id="platform" className="py-20 px-6 bg-secondary/30">
+    <section id="platform" className="py-24 px-6 bg-card/30">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <span className="text-sm font-medium text-primary uppercase tracking-wider">Platform</span>
-          <h2 className="text-3xl md:text-5xl font-serif font-medium text-foreground mt-4 mb-6">
+          <span className="text-sm font-mono text-primary uppercase tracking-wider">Platform</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-4 mb-6">
             Built for business operators
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -47,16 +47,16 @@ const Platform = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {platformFeatures.map((feature) => (
             <div
               key={feature.title}
-              className="bg-card rounded-xl p-6 border border-border hover:shadow-md transition-all duration-300"
+              className="bg-card border border-border rounded-lg p-6 hover:border-primary/30 transition-all duration-300 group"
             >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <feature.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold font-sans text-foreground mb-2">
+              <h3 className="text-base font-bold text-foreground mb-2 font-mono">
                 {feature.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
