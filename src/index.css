@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -16,7 +18,7 @@
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 45 100% 51%;
+    --primary: 204 93.75% 93.7255%;
     --primary-foreground: 0 0% 7%;
 
     --secondary: 0 0% 15%;
@@ -48,7 +50,7 @@
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 0 0% 18%;
     --sidebar-ring: 45 100% 51%;
-    
+
     --chart-1: 45 100% 51%;
     --chart-2: 40 95% 45%;
     --chart-3: 50 90% 55%;
