@@ -10,7 +10,6 @@ const CTA = () => {
           <Button variant="hero" size="lg">Sign up</Button>
           <Button variant="heroOutline" size="lg">Book a demo →</Button>
         </div>
-        <p className="text-sm text-primary font-mono mt-6">14 day trial, no credit card required</p>
       </div>
     </section>
   );

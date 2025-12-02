@@ -51,10 +51,6 @@ const Hero = () => {
           </Button>
         </div>
 
-        <p className="text-sm text-primary font-mono mb-16 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          14 day trial, no credit card required
-        </p>
-
         {/* Suggested Questions */}
         <div className="animate-fade-in" style={{ animationDelay: "0.5s" }}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
