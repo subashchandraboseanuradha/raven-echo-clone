@@ -40,10 +40,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="flex items-center justify-end gap-2 mt-6">
-              <div className="flex items-center gap-2 text-muted-foreground text-xs font-mono">
-                <Sparkles className="w-4 h-4" />
-                <span className="hidden sm:inline">AI</span>
-              </div>
+              
               <Button variant="secondary" size="sm" className="gap-2">
                 <Command className="w-3 h-3" />
                 Try it
