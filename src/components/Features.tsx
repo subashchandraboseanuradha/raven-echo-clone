@@ -1,6 +1,5 @@
 const Features = () => {
-  return (
-    <section id="features" className="py-24 px-6">
+  return <section id="features" className="py-24 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <span className="text-sm font-mono text-primary uppercase tracking-wider">Features</span>
@@ -98,21 +97,27 @@ const Features = () => {
             
             {/* Database Icons Grid */}
             <div className="grid grid-cols-3 gap-1.5 flex-1">
-              {[
-                { name: 'PG', color: 'bg-blue-500/20 text-blue-400' },
-                { name: 'MY', color: 'bg-orange-500/20 text-orange-400' },
-                { name: 'SF', color: 'bg-cyan-500/20 text-cyan-400' },
-                { name: 'BQ', color: 'bg-green-500/20 text-green-400' },
-                { name: 'RS', color: 'bg-red-500/20 text-red-400' },
-                { name: '+5', color: 'bg-muted text-muted-foreground' },
-              ].map((db) => (
-                <div
-                  key={db.name}
-                  className={`aspect-square rounded-lg border border-border flex items-center justify-center text-[10px] font-mono font-medium ${db.color} group-hover:scale-105 transition-transform`}
-                >
+              {[{
+              name: 'PG',
+              color: 'bg-blue-500/20 text-blue-400'
+            }, {
+              name: 'MY',
+              color: 'bg-orange-500/20 text-orange-400'
+            }, {
+              name: 'SF',
+              color: 'bg-cyan-500/20 text-cyan-400'
+            }, {
+              name: 'BQ',
+              color: 'bg-green-500/20 text-green-400'
+            }, {
+              name: 'RS',
+              color: 'bg-red-500/20 text-red-400'
+            }, {
+              name: '+5',
+              color: 'bg-muted text-muted-foreground'
+            }].map(db => <div key={db.name} className={`aspect-square rounded-lg border border-border flex items-center justify-center text-[10px] font-mono font-medium ${db.color} group-hover:scale-105 transition-transform`}>
                   {db.name}
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
 
@@ -137,29 +142,10 @@ const Features = () => {
           </div>
 
           {/* Security - Bottom Card */}
-          <div className="md:col-span-2 bg-card border border-border rounded-2xl p-6 flex overflow-hidden relative group hover:border-primary/50 transition-colors">
-            <div className="flex-1">
-              <span className="text-xs font-mono text-primary uppercase tracking-wider">Enterprise Security</span>
-              <h3 className="text-lg font-semibold text-foreground mt-1 mb-2">SOC 2 Compliant</h3>
-              <p className="text-muted-foreground text-sm">
-                Your data never leaves your infrastructure. Read-only access with full audit logs.
-              </p>
-            </div>
-            
-            {/* Shield Graphic */}
-            <div className="flex items-center justify-center w-24 relative">
-              <div className="absolute w-20 h-20 rounded-full bg-primary/10 animate-pulse"></div>
-              <svg className="w-12 h-12 text-primary relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                <path d="M9 12l2 2 4-4" />
-              </svg>
-            </div>
-          </div>
+          
 
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Features;
