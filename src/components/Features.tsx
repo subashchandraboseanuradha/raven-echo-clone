@@ -1,13 +1,3 @@
-import { BarChart, Bar, XAxis, ResponsiveContainer } from "recharts";
-
-const chartData = [
-  { name: "Q1", value: 35 },
-  { name: "Q2", value: 55 },
-  { name: "Q3", value: 75 },
-  { name: "Q4", value: 95 },
-  { name: "Q5", value: 65 },
-];
-
 const Features = () => {
   return (
     <section id="features" className="py-24 px-6">
@@ -74,23 +64,26 @@ const Features = () => {
               Charts generated automatically from your queries.
             </p>
             
-            {/* Recharts Bar Chart */}
-            <div className="flex-1 w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
-                  <XAxis 
-                    dataKey="name" 
-                    axisLine={false} 
-                    tickLine={false} 
-                    tick={{ fontSize: 10, fill: 'hsl(var(--muted-foreground))' }} 
-                  />
-                  <Bar 
-                    dataKey="value" 
-                    fill="hsl(var(--primary))" 
-                    radius={[4, 4, 0, 0]} 
-                  />
-                </BarChart>
-              </ResponsiveContainer>
+            {/* Chart Graphic */}
+            <div className="flex-1 flex items-end justify-between gap-1 px-2">
+              <div className="flex flex-col items-center gap-1 flex-1">
+                <div className="w-full max-w-6 h-8 bg-gradient-to-t from-primary/60 to-primary/30 rounded-sm"></div>
+              </div>
+              <div className="flex flex-col items-center gap-1 flex-1">
+                <div className="w-full max-w-6 h-12 bg-gradient-to-t from-primary/70 to-primary/40 rounded-sm"></div>
+              </div>
+              <div className="flex flex-col items-center gap-1 flex-1">
+                <div className="w-full max-w-6 h-16 bg-gradient-to-t from-primary/80 to-primary/50 rounded-sm"></div>
+              </div>
+              <div className="flex flex-col items-center gap-1 flex-1">
+                <div className="w-full max-w-6 h-10 bg-gradient-to-t from-primary/65 to-primary/35 rounded-sm"></div>
+              </div>
+              <div className="flex flex-col items-center gap-1 flex-1">
+                <div className="w-full max-w-6 h-20 bg-gradient-to-t from-primary to-primary/60 rounded-sm"></div>
+              </div>
+              <div className="flex flex-col items-center gap-1 flex-1">
+                <div className="w-full max-w-6 h-14 bg-gradient-to-t from-primary/75 to-primary/45 rounded-sm"></div>
+              </div>
             </div>
           </div>
 
