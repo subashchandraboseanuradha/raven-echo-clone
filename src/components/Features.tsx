@@ -1,3 +1,13 @@
+import { BarChart, Bar, XAxis, ResponsiveContainer } from "recharts";
+
+const chartData = [
+  { name: "Q1", value: 35 },
+  { name: "Q2", value: 55 },
+  { name: "Q3", value: 75 },
+  { name: "Q4", value: 95 },
+  { name: "Q5", value: 65 },
+];
+
 const Features = () => {
   return (
     <section id="features" className="py-24 px-6">
@@ -64,28 +74,23 @@ const Features = () => {
               Charts generated automatically from your queries.
             </p>
             
-            {/* Animated Bar Chart */}
-            <div className="flex-1 flex items-end justify-center gap-3 pb-2">
-              <div className="flex flex-col items-center gap-1">
-                <div className="w-8 bg-gradient-to-t from-primary/40 to-primary/20 rounded-t-md transition-all duration-500 group-hover:from-primary/60 group-hover:to-primary/30" style={{ height: '35%' }}></div>
-                <span className="text-[10px] text-muted-foreground font-mono">Q1</span>
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <div className="w-8 bg-gradient-to-t from-primary/50 to-primary/25 rounded-t-md transition-all duration-500 group-hover:from-primary/70 group-hover:to-primary/40" style={{ height: '55%' }}></div>
-                <span className="text-[10px] text-muted-foreground font-mono">Q2</span>
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <div className="w-8 bg-gradient-to-t from-primary/70 to-primary/40 rounded-t-md transition-all duration-500 group-hover:from-primary/90 group-hover:to-primary/60" style={{ height: '75%' }}></div>
-                <span className="text-[10px] text-muted-foreground font-mono">Q3</span>
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <div className="w-8 bg-gradient-to-t from-primary to-primary/60 rounded-t-md transition-all duration-500 group-hover:scale-105" style={{ height: '100%' }}></div>
-                <span className="text-[10px] text-muted-foreground font-mono">Q4</span>
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <div className="w-8 bg-gradient-to-t from-primary/60 to-primary/35 rounded-t-md transition-all duration-500 group-hover:from-primary/80 group-hover:to-primary/50" style={{ height: '65%' }}></div>
-                <span className="text-[10px] text-muted-foreground font-mono">Q5</span>
-              </div>
+            {/* Recharts Bar Chart */}
+            <div className="flex-1 w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={chartData} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
+                  <XAxis 
+                    dataKey="name" 
+                    axisLine={false} 
+                    tickLine={false} 
+                    tick={{ fontSize: 10, fill: 'hsl(var(--muted-foreground))' }} 
+                  />
+                  <Bar 
+                    dataKey="value" 
+                    fill="hsl(var(--primary))" 
+                    radius={[4, 4, 0, 0]} 
+                  />
+                </BarChart>
+              </ResponsiveContainer>
             </div>
           </div>
 
