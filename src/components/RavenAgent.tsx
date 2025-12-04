@@ -39,7 +39,7 @@ const RavenAgent = () => {
             <img
               src="/assets/Frame raven.svg"
               alt="Raven Agent"
-              className="w-full h-auto"
+              className="w-full h-auto max-w-[500px]"
             />
           </div>
         </div>
