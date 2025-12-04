@@ -37,25 +37,25 @@ const NetworkAnimation = () => {
   }, []);
 
   return (
-    <section className="py-20 px-6 bg-foreground overflow-hidden">
+    <section className="py-20 px-6 bg-background overflow-hidden">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px]">
           {/* Left Content */}
-          <div className="text-background">
+          <div className="text-foreground">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Traditional data analytics
             </h2>
-            <p className="text-background/70 text-lg mb-8 max-w-md">
+            <p className="text-muted-foreground text-lg mb-8 max-w-md">
               With other BI tools or even modern MCP workflows, only technical teammates can get data insights.
             </p>
             <ul className="space-y-3">
               {painPoints.map((point, index) => (
                 <li 
                   key={index} 
-                  className="flex items-center gap-3 text-background/80 animate-fade-in"
+                  className="flex items-center gap-3 text-muted-foreground animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-background/60" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground" />
                   {point}
                 </li>
               ))}
@@ -86,21 +86,6 @@ const NetworkAnimation = () => {
         @keyframes dashMove {
           to {
             stroke-dashoffset: -24;
-          }
-        }
-        
-        .network-svg-container circle[fill="#0DFF00"] {
-          animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-          0%, 100% {
-            opacity: 1;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.6;
-            transform: scale(1.2);
           }
         }
       `}</style>
