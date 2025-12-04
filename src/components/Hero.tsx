@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Sparkles, Command } from "lucide-react";
+import { Command } from "lucide-react";
+
 const suggestedQuestions = [{
   category: "Product",
   question: "Are there any features we've added that have increased engagement?"
@@ -16,6 +17,7 @@ const suggestedQuestions = [{
   category: "Data & Analytics",
   question: "Trend key KPIs over time and flag abnormal spikes."
 }];
+
 const Hero = () => {
   return <section className="pt-32 pb-20 px-6 min-h-screen flex flex-col justify-center">
       <div className="container mx-auto text-center max-w-4xl">
@@ -53,10 +55,7 @@ const Hero = () => {
         animationDelay: "0.3s"
       }}>
           <Button variant="hero" size="default">
-            Sign up
-          </Button>
-          <Button variant="heroOutline" size="default">
-            Book a demo →
+            Book a demo
           </Button>
         </div>
 
