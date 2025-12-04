@@ -68,7 +68,10 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply font-sans font-bold tracking-tight;
   }
 }
@@ -84,5 +87,15 @@
 
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-300;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -20;
+    }
+  }
+
+  .animated-path {
+    animation: dash 1s linear infinite;
   }
 }
